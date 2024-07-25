@@ -1,0 +1,139 @@
+# Linuxファイルシステム階層
+
+- / "ROOT"（ルート）
+  - /BIN "ESSENTIAL BINARIES"（重要なバイナリ）
+    - CAT
+    - CHGRP
+    - CHMOD
+    - CHOWN
+    - CP
+    - DATE
+    - DD
+    - DF
+    - DMESG
+    - ECHO
+    - HOSTNAME
+    - KILL
+    - LN
+    - LOGIN
+    - LS
+    - MKDIR
+    - MKNOD
+    - MORE
+    - MOUNT
+    - MV
+    - PS
+    - PWD
+    - RM
+    - RMDIR
+    - SED
+    - SH
+    - STTY
+    - SU
+    - SYNC
+    - TRUE
+    - UMOUNT
+    - UNAME
+  - /BOOT "STATIC FILES OF BOOT LOADER"（ブートローダーの静的ファイル）
+    - KERNEL
+    - SYSTEM.MAP
+    - VMLINUZ
+    - GRUB
+    - INITRD
+    - BOOT
+  - /ETC "HOST SPECIFIC SYSTEM CONFIG"（ホスト固有のシステム設定）
+    - CSHRC
+    - EXPORTS
+    - FSTAB
+    - FTPUSERS
+    - GATEWAYS
+    - GETTYDEFS
+    - GROUP
+    - HOST.CONF
+    - HOSTS
+    - HOSTS.ALLOW
+    - HOSTS.DENY
+    - HOSTS.EQUIV
+    - HOSTS.LPDS
+    - INETD.CONF
+    - INITTAB
+    - ISSUE
+    - LD.SO.CONF
+    - MOTD
+    - MTAB
+    - MTOOLS
+    - NETWORKS
+    - PASSWD
+    - PRINTCAP
+    - PROFILE
+    - PROTOCOLS
+    - RESOLV.CONF
+    - RPC
+    - SECURETTY
+    - SERVICES
+    - SHELLS
+    - SYSLOG.CONF
+  - /DEV "LOCATION OF SPECIAL OR DEVICE FILES"（特殊ファイルやデバイスファイルの場所）
+  - /HOME "USER HOME DIRECTORIES"（ユーザーのホームディレクトリ）
+  - /LIB "LIBRARY AND KERNEL MODULES"（ライブラリとカーネルモジュール）
+  - /MNT "MOUNT FILES FOR TEMPORARY FILESYSTEMS"（一時的なファイルシステムのマウントファイル）
+  - /OPT "ADD-ON APPLICATION SOFTWARE"（追加アプリケーションソフトウェア）
+  - /ROOT "HOME DIR. FOR ROOT USER"（rootユーザーのホームディレクトリ）
+  - /SBIN "SYSTEM BINARIES"（システムバイナリ）
+    - FASTBOOT
+    - FASTHALT
+    - FDISK
+    - FSCK
+    - GETTY
+    - HALT
+    - IFCONFIG
+    - INIT
+    - MKFS
+    - MKSWAP
+    - REBOOT
+    - ROUTE
+    - SWAPON
+    - SWAPOFF
+    - UPDATE
+  - /TMP "TEMPORARY FILES DELETED ON BOOTUP"（起動時に削除される一時ファイル）
+  - /USR "SHAREABLE AND READ-ONLY DATA"（共有可能で読み取り専用のデータ）
+    - /LOCAL "LOCAL SOFTWARE"（ローカルソフトウェア）
+      - /GAMES
+      - /INCLUDE
+      - /LIB
+      - /MAN
+      - /SBIN
+      - /SHARE
+    - /SHARE "STATIC DATA SHAREABLE AMONG ALL ARCHITECTURES"（全アーキテクチャで共有可能な静的データ）
+    - /MAN "MANUAL PAGES"（マニュアルページ）
+      - MAN1 "ユーザープログラム"
+      - MAN2 "システムコール"
+      - MAN3 "ライブラリ関数"
+      - MAN4 "特殊ファイル"
+      - MAN5 "ファイル形式"
+      - MAN6 "ゲーム"
+      - MAN7 "その他"
+      - MAN8 "システム管理"
+    - /BIN "MOST USER COMMANDS"（ほとんどのユーザーコマンド）
+    - /INCLUDE "STANDARD INCLUDE FILES FOR 'C' PROG."（C言語プログラム用の標準インクルードファイル）
+    - /LIB "OBJ, BIN, LIB FILES FOR PROG. AND PACKAGES"（プログラムとパッケージ用のオブジェクト、バイナリ、ライブラリファイル）
+    - /SBIN "NON ESSENTIAL BINARIES"（重要ではないバイナリ）
+  - /VAR "VARIABLE DATA FILES"（可変データファイル）
+    - /CACHE "APPLICATION CACHE DATA"（アプリケーションのキャッシュデータ）
+    - /LIB "VARIABLE STATE INFORMATION REMAINS AFTER REBOOT"（再起動後も残る可変状態情報）
+    - /LOCAL "VARIABLE DATA FOR /USR/LOCAL"（/usr/local用の可変データ）
+    - /LOCK "LOCK FILES FOR SHARED RESOURCES"（共有リソース用のロックファイル）
+    - /LOG "LOG FILES AND DIRS"（ログファイルとディレクトリ）
+      - LASTLOG
+      - MESSAGES
+      - WTMP
+    - /OPT "VARIABLE DATA OF PACKAGES INSTALLED"（インストールされたパッケージの可変データ）
+    - /RUN "INFO OF SYSTEM SINCE IT WAS BOOTED"（システム起動以降の情報）
+    - /SPOOL "DATA AWAITING PROCESSING"（処理待ちデータ）
+      - /LPD
+      - /MQUEUE
+      - /NEWS
+      - /RWHO
+      - /UUCP
+    - /TMP "AVAILABLE FOR PROG."（プログラムで利用可能）
+    - /YP "DATA FOR NIS SERVICES"（NISサービス用データ）
