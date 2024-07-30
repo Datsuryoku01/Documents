@@ -9,7 +9,7 @@ catの反対はtac
 The syntax for the cat command is as follows:   
     $ cat [OPTION] [FILE]
 
-- - OPTION - 利用可能なオプションを表示するには、 --help (cat --help) オプションまたはその man ページ (man cat) を使用します。  
+- OPTION - 利用可能なオプションを表示するには、 --help (cat --help) オプションまたはその man ページ (man cat) を使用します。  
 - FILE - データを連結または読み取る 0 個以上のファイル。
 
 1. ファイルの内容を表示する
