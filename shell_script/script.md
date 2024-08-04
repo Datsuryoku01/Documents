@@ -19,7 +19,8 @@ command &> file.txt
 
 
 - 数値を比較する(比較演算子）
-| 演算子 | 書き方 | 意味 | 例     |
+
+| 演算子 | 書き方 | 意味 | 例  |
 |-----|------|-------|------|
 | eq  | x -eq y | x = y | \[ 5 -eq 5 \] && echo "True"→ True |
 | ge  | x -ge y | x >= y | \[ 5-ge 3 \] && echo "True" → True |
