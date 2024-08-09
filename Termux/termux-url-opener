@@ -1,0 +1,2 @@
+Termuxでは~/binにtermux-url-openerというファイルを作ると
+他のアプリから共有画面でTermuxを選択したとき、URL等を第一引数としてtermux-url-openerを実行してくれます。

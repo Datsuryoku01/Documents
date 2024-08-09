@@ -1,0 +1,9 @@
+pacman -Syu
+passwd root
+pacman -S sudo
+useradd  datsu
+cat /etc/passwd
+cat /etc/group
+passwd datsu
+mkdir datsu
+usermod -d /home/datsu datsu

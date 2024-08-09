@@ -1,0 +1,38 @@
+#nanoの設定ファイルを作る
+#設定ファイルを作る 。　　touch .nanorc 〜で。  
+
+set autoindent     #インテンドを揃える
+set linenumbers    #左端に行表示
+set zap            #指定範囲を削除可能に 
+set multibuffer    #^Rで新しいファイル編集に
+set titlecolor white,green  
+set numbercolor white,green  
+set selectedcolor white,green  
+set statuscolor white,green  
+set keycolor white,green  
+set functioncolor white,green
+
+bind ^C copy        main
+bind ^Q exit        all
+bind ^S writeout    main
+bind ^V paste       all
+bind ^X cut         main
+bind ^Y redo        main
+bind ^Z undo        main
+
+#gitからsyntax highlightを追加する
+#（こっちの方が簡単かもね。）  
+#http://github.com/scopatz/nanorc
+
+#・.nanorcに追加する。  
+#include "~/.nano/*.nanorc"  
+　
+#・ 起動のコマンドラインオプション
+#nano [Option] [File Name]   
+#起動はnano+オプション+ファイル名
+
+#使用頻度の高いOption
+#* -v        閲覧モード
+#* -m        マウスを使用可
+#* -B        バックアップファイルの作成
+* -F          新しいバッファでファイルを読む

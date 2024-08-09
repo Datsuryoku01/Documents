@@ -1,0 +1,67 @@
+force_color_prompt=yes
+PS1='${debian_chroot:+($debian_chroot)}\[\e[38;05;74m\]\u\[\e[00m\]@\[\e[38;05;250m\]\h\[\e[00m\]:\[\e[38;05;172m\]\w\[\e[00m\]\$ '
+
+eval `dircolors ~/.colorrc`
+alias ls='ls -aF --color=auto'
+
+#export LANG=ja_JP.UTF-8
+#export LANGUAGE="ja_JP:ja"
+#export LC_ALL='ja_JP.UTF-8'
+#export LC_MESSAGES='ja_JP.UTF-8'
+
+# cd sdcard/Documents
+
+# python環境
+#alias my01='source ~/env/my01/bin/activate'  # エイリアスを追記
+#alias my02='source ~/env/my02/bin/activate'
+#alias my03='source ~/env/my03/bin/activate'
+#alias my04='source ~/env/my04/bin/activate'
+
+. "$HOME/.cargo/env" #Rust用
+
+force_color_prompt=yes
+
+alias ps='ps --sort=start_time'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias ll='ls -Al Fh --show-control-chars --color=auto'
+alias sc='screen'
+
+export HISTSIZE=200 # これだけコマンド履歴を残す
+
+ーーーーーps1ーーーーー
+#export PS1='\[\033[01;32m\]\d \[\033[00m\]\u@\h:\w\$ '
+#上記のPS1変数は、以下の要素を含んでいます。
+
+\[\033[01;32m\] : 緑色のテキストを表します。
+\d : 日付を表します。
+\[\033[00m\] : テキストの色をリセットします。
+\u : ユーザー名を表します。
+\h : ホスト名を表します。
+\w : カレントディレクトリを表します。
+\$ : $の後ろのスペースは、プロンプトの末尾にスペースを追加するためのものです。
+
+PROMPT コマンドの引数では次の特殊コードが使用できます。
+
+$A  & (アンパサンド)
+$B  | (パイプ)
+$C  ( (左かっこ)
+$D  現在の日付
+$E  エスケープ コード (ASCII コードの 27)
+$F  ) (右かっこ)
+$G  > (不等号 (より大))
+$H  バックスペース (直前の文字を削除します)
+$L  < (不等号 (より小))
+$N  現在のドライブ
+$P  現在のドライブとパス
+$Q  = (等号)
+$S    (空白)
+$T  現在の時刻
+$V  Windows のバージョン番号
+$_  キャリッジ リターンとラインフィード
+$$  $ (ドル記号)
+
+# prompt $p$g  「現在のドライブとパス」＋「<」
+
+# prompt $cReady?$f
