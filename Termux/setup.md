@@ -202,7 +202,7 @@ cd Python-3.8.13
 make           #所要時間 約19分
 sudo make install       #所要時間     約5分
 ```
-【Python 確認作業】
+（Python 確認作業）
 ```bash
 cd
 which python3
@@ -220,9 +220,38 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt list python3.*
 ```
 
+25. 【仮想環境を作成】
+ここでは、ホームディレクトリ以下全体で使用するmy01という環境名を定義します。
+```bash
+mkdir ~/env  #仮想環境を作るディレクトリを作成
+cd ~/env/  #そのディレクトリに移る
+```
+
+次に、仮想環境を作成する。my01のディレクトリを作成し、その中に環境を構築する。
+```bash
+python3 -m venv my01
+```
+
+・作成した環境を有効化
+```bash
+source ~/venv/python3.9/my01/bin/activate
+#プロンプトの左端に(my01)のように環境名が表示されれば、正しく参照されています。
+```
+・必要なPythonパッケージを仮想環境にインストールする
+仮想環境でPython開発に必要なパッケージをインストールします。
+ターミナルで次のコマンドを実行します。
+```bash
+(my01) $ pip install <package-name>
+```
+・仮想環境をデアクティブ化する
+仮想環境から抜けるには次のコマンドを実行
+```bash
+deactivate
+```
+
 **pythonのインストールが上手くいかない時は、以下の方法も参考に**
 
-25. 【仮想環境に setuptools をインストールする】
+26. 【仮想環境に setuptools をインストールする】
 ```bash
 wget https://files.pythonhosted.org/packages/a8/d9/28490a9ef6592c3471bd1bcacaf5bd0dee2bb05c8a8bcf901e673b2f1732/setuptools-63.3.0.tar.gz
 tar zxf setuptools-63.3.0.tar.gz
@@ -230,7 +259,7 @@ cd setuptools-63.3.0
 python3 setup.py install       
 ```
 
-26. 【仮想環境に pip をインストールする】
+27. 【仮想環境に pip をインストールする】
 ```bash
 wget https://files.pythonhosted.org/packages/46/28/addd7e66bb3af799d35a5dcbb79407b591a7ed674f4efd2bd8f930c40821/pip-22.2.1.tar.gz
 tar zxf pip-22.2.1.tar.gz
@@ -239,7 +268,7 @@ python3 setup.py install
 ```
 ---
 
-27. 【Python環境の切り替え】
+28. 【Python環境の切り替え】
 
 - update-alternativesのインストール
 
