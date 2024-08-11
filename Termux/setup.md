@@ -213,12 +213,21 @@ python3 --version
 - リポジトリ追加  
 ```bash
 sudo apt install -y software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa
 ```
 - インストール可能なPythonのバージョンを確認
 ```bash
 sudo apt list python3.*
+#sudo apt install pythonXX.XX(バージョン)
 ```
+
+```bash
+#Python 各バージョンインストール
+sudo apt install -y python3.9 python3.9-venv
+sudo apt install -y python3.7 python3.7-venv
+sudo apt install -y python3.6 python3.6-venv
+```
+※venvで仮想環境を分けるため、pythonX.X-venvもインストール。
+※pipでビルドが必要になる場合、エラーになるケースがあり。その場合は、pythonX.X-devもインストールしてみる。
 
 25. 【仮想環境を作成】
 ここでは、ホームディレクトリ以下全体で使用するmy01という環境名を定義します。
@@ -291,5 +300,43 @@ update-alternatives --list python3
 # update-alternatives: エラー: python3 の alternatives がありません
 
 シンボリックの登録
+```bash
+#例えば、下記のように登録する。最後の番号は優先順位
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.9 130
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 2
 ```
+書式:  
+sudo update-alternatives --install <作成するシンボリックのパス> <グループ名> <実体へのパス> <優先度>  
+
+
+どのようなバージョンがインストールされて現状の優先バージョンを確認する
+```bash
+sudo update-alternatives --config python3
+```
+
+・Pythonの切り替え方法
+Priorityを選択して切り替える方法
+```bash
+sudo update-alternatives --config python
+
+There are 5 choices for the alternative python (providing /usr/bin/python).
+  Selection    Path                Priority   Status
+----------------------------------------------
+* 0            /usr/bin/python3.9   130      auto mode
+  1            /usr/bin/python3.6   100      manual mode
+  2            /usr/bin/python3.7   110      manual mode
+  3            /usr/bin/python3.8   120      manual mode
+  4            /usr/bin/python3.9   130      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 
+```
+
+のように表示されるので、Selectionの番号を入れてEnterキーを押すと、そのバージョンが有効になります。
+※上記はPython 3.9が有効になっている状態です。
+```bash
+python -V
+#Python 3.9.6
+```
+のように、選択したバージョンになっていればOK。
+
